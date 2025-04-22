@@ -16,5 +16,24 @@ The plot below shows the distribution of age based on heart disease risk. We not
 
 ![Age against risk violin plot](images/age-v-risk.png)
 
+### Blood Pressure
+![Systolic Blood Pressure against risk boxplot](images/sysbp-v-tychd.png)
+
+![Diastolic Blood Pressure against risk boxplot](images/diabp-v-tychd.png)
+
+Higher blood pressure seems to be an indicator of having risk of future heart disease as shown in the two plots above where the average systolic and diastolic blood pressure is higher in cases with risk of heart disease. 
+
+### Predictions
+The model was fitted using a training set which was a random sample of 70% of the dataset. Predictions were done using the remaining observations.
+
+| Actual \ Predicted | 0 (No Disease) | 1 (Heart Disease) |
+|--------------------|----------------|--------------------|
+| 0 (No Disease)     | 952 (TN)       | 5 (FP)             |
+| 1 (Heart Disease)  | 174 (FN)       | 13 (TP)            |
+
+This shows that the model was fairly precise when it predicted positive with 72% accuracy but it missed on most actual positive cases as it was only able to capture 6% of the total positive cases.
+
+# Conclusion
+A lower threshold might be better when predicting since false negatives in this case could be very dangerous.
 
 
