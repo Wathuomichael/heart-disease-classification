@@ -11,6 +11,7 @@ This is a report on the analysis of the factors that are associated with risk of
 ![Age against risk boxplot](images/age-v-risk-boxplot.png)
 
 The plot above shows the relationship between age and risk of coronary heart disease. Individuals who are older have a higher risk of coronary heart disease compared to their younger counterparts.
+
 The plot below shows the distribution of age based on heart disease risk. We notice the large majority of younger people are in the no risk category and majority of older people are in the risk category.
 
 ![Age against risk violin plot](images/age-v-risk.png)
