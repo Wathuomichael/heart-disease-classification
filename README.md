@@ -1,10 +1,12 @@
 # Summary
-Analysis showed that some of the most important predictors for ten year risk of coronary heart disease include gender, where men have a higher risk than women. Age was also significant factor as risk was more prevalent among older people. Number of cigarettes used per day showed increase in risk with more cigarettes by as much as 1.7% per extra cigarette per day. Others included: Hypertension, total cholesterol level, systolic blood pressure and glucose level.
+Analysis showed that some of the most important predictors for ten year risk of coronary heart disease include gender, where men have a higher risk than women. Age was also significant factor as risk was more prevalent among older people. Number of cigarettes used per day showed increase in risk with more cigarettes per day. Others included: Hypertension, total cholesterol level, systolic blood pressure and glucose level.
 
-Model predictions using a threshold of 0.5 contained a lot of false negatives with only a 7% of actual positives correctly predicted and when the model predicted positive it had an accuracy of 72%.
+Four models: Logistic regression, Linear Discriminant Analysis(LDA), Quadratic Discriminant Analysis(QDA) and K Nearest Neighbours(KNN) were used and compared to determine which was the most accurate model for this problem. The logistic model was the best performing model.
+
 
 # Introduction
-This is a report on the analysis of the factors that are associated with risk of future heart disease as well as predicting risk of heart disease using logistic regression. The dataset contains information on patients from Framingham, Massachusetts.
+This is a report on the analysis of the factors that are associated with risk of future heart disease as well as predicting risk of heart disease using four different classification models: Logistic regression, Linear Discriminant Analysis(LDA), Quadratic Discriminant Analysis(QDA) and K Nearest Neighbours(KNN) . The dataset contains information on patients from Framingham, Massachusetts.
+
 
 ## Findings
 ### Age
@@ -23,8 +25,8 @@ The plot below shows the distribution of age based on heart disease risk. We not
 
 Higher blood pressure seems to be an indicator of having risk of future heart disease as shown in the two plots above where the average systolic and diastolic blood pressure is higher in cases with risk of heart disease. 
 
-### Predictions
-The model was fitted using a training set which was a random sample of 70% of the dataset. Predictions were done using the remaining observations.
+### Model Performance
+The models were fitted using a training set which was a random sample of 70% of the dataset. Predictions were done using the remaining observations. We used PR(Precision Recall) curves to visualize the difference in each models performance and as they are also suitable for an imbalanced dataset and they also focus more on the positive class which is more critical in this classification problem.
 
 | Actual \ Predicted | 0 (No Disease) | 1 (Heart Disease) |
 |--------------------|----------------|--------------------|
