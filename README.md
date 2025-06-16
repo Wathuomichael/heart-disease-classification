@@ -35,15 +35,11 @@ From the PR curves we can see that the log model has the highest AUC(Area Under 
 The Log model had the best performance of the four and we chose to proceed with that and chose a threshold of 0.22 as it provided the optimal F1-Score. This is the confusion matrix of the model at 0.22 threshold.
 
 
-|                    Predicted                             |
 | Actual/Predicted   | 0 (No Disease) | 1 (Heart Disease)  |
 |--------------------|----------------|--------------------|
 | 0 (No Disease)     | 764 (TN)       | 193 (FP)           |
 | 1 (Heart Disease)  |  82 (FN)       | 105 (TP)           |
 
-This shows that the model was fairly precise when it predicted positive with 72% accuracy but it missed on most actual positive cases as it was only able to capture 6% of the total positive cases.
-
-# Conclusion
-A lower threshold might be better when predicting since false negatives in this case could be very dangerous.
+Recall at this point was 0.56 and precision was 0.35. This shows that when the model predicted positive it had an accuracy of 35% and was able to capture 56% of the of the actual positives.
 
 
