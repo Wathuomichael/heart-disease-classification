@@ -34,8 +34,8 @@ From the PR curves we can see that the log model has the highest AUC(Area Under 
 
 The Log model had the best performance of the four and we chose to proceed with that and chose a threshold of 0.22 as it provided the optimal F1-Score. This is the confusion matrix of the model at 0.22 threshold.
 
-                     |           Predicted                 |
-| Actual             | 0 (No Disease) | 1 (Heart Disease)  |
+
+| Actual/Predicted   | 0 (No Disease) | 1 (Heart Disease)  |
 |--------------------|----------------|--------------------|
 | 0 (No Disease)     | 764 (TN)       | 193 (FP)           |
 | 1 (Heart Disease)  |  82 (FN)       | 105 (TP)           |
