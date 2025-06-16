@@ -28,10 +28,17 @@ Higher blood pressure seems to be an indicator of having risk of future heart di
 ### Model Performance
 The models were fitted using a training set which was a random sample of 70% of the dataset. Predictions were done using the remaining observations. We used PR(Precision Recall) curves to visualize the difference in each models performance and as they are also suitable for an imbalanced dataset and they also focus more on the positive class which is more critical in this classification problem.
 
-| Actual \ Predicted | 0 (No Disease) | 1 (Heart Disease) |
+![Precision Recall curves for the four models](images/prcurves.png)
+
+From the PR curves we can see that the log model has the highest AUC(Area Under Curve) at 0.902 followed by KNN at 0.336 then QDA at 0.185 and lastly LDA at 0.149. This shows that the log model was significantly better than the other models. KNN was better than LDA and QDA but still had a low overall AUC score. QDA PR curve shows a steep drop in precision as recall increases very early on which shows the model predicted a lot of false positives. This is also similar in the LDA PR curve.
+
+The Log model had the best performance of the four and we chose to proceed with that and chose a threshold of 0.22 as it provided the optimal F1-Score. This is the confusion matrix of the model at 0.22 threshold.
+
+                     |           Predicted                 |
+| Actual             | 0 (No Disease) | 1 (Heart Disease)  |
 |--------------------|----------------|--------------------|
-| 0 (No Disease)     | 952 (TN)       | 5 (FP)             |
-| 1 (Heart Disease)  | 174 (FN)       | 13 (TP)            |
+| 0 (No Disease)     | 764 (TN)       | 193 (FP)           |
+| 1 (Heart Disease)  |  82 (FN)       | 105 (TP)           |
 
 This shows that the model was fairly precise when it predicted positive with 72% accuracy but it missed on most actual positive cases as it was only able to capture 6% of the total positive cases.
 
